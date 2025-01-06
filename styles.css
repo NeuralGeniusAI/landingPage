@@ -654,7 +654,7 @@ span {
 .section-automated-solutions .container .items {
     display: flex;
     align-items: center;
-    height: 300px;
+    height: auto;
     padding: 15px 20px;
     text-align: center;
     font-family: Arial, sans-serif;
