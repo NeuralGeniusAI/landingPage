@@ -26,6 +26,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x:hidden;
 }
 
 body {
@@ -1057,7 +1058,7 @@ span {
     flex-direction: column;
     width: 100%;
     max-width: 1300px;
-    /* height: 100vh; */
+    height: auto;
     margin-top: 70px;
 }
 
