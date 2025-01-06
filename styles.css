@@ -1,0 +1,2365 @@
+/* Variables */
+:root {
+    --bg-color: #03021c;
+    --bg-color-btn-light: #7d28c9;
+    --bg-color-btn-dark: #4c02e1;
+    --font-size-big-title: 55px;
+    --font-size-middle-title: 25px;
+    --font-size-paragraph: 17px;
+
+    --font-size-big-title-1100px: 40px;
+    --font-size-middle-title-1100px: 20px;
+    --font-size-paragraph-1100px: 14px;
+
+    --font-size-big-title-900px: 35px;
+    --font-size-middle-title-900px: 18px;
+    --font-size-paragraph-900px: 12px;
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 0px 7.5% 0px 7.5%;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+p,
+a,
+li,
+span {
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.fondo-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 400vw;
+    height: 100vh;
+    z-index: -10;
+}
+
+.fondo-body img {
+    position: relative;
+    width: 100%;
+    height: 150%;
+}
+
+
+.container-wpp {
+    width: 65px;
+    height: 65px;
+    padding: 12px;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #4ac959;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+.container-wpp:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.container-wpp img {
+    width: 100%;
+}
+
+
+/* Estilos header */
+.header {
+    display: flex;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    width: 100%;
+}
+
+.header .nav-mobile {
+    display: none;
+}
+
+.header .nav .container-logo {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    font-size: var(--font-size-paragraph);
+}
+
+.header .nav .container-logo img {
+    width: 120px;
+}
+
+.header .nav .ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 25px;
+    list-style-type: none;
+    width: 80%;
+}
+
+.header .nav .ul .services .mini-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    right: 40% - 220px;
+    gap: 15px;
+    list-style-type: none;
+    width: 180px;
+    height: fit-content;
+    padding: 20px 40px;
+    background-color: #cb70fc;
+    z-index: 10;
+}
+
+.header .nav .ul .services:hover .mini-menu {
+    display: flex;
+}
+
+.header .nav .ul li a {
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    font-size: var(--font-size-paragraph - 15px);
+}
+
+.header .nav .ul li a:hover {
+    color: var(--bg-color-btn-dark);
+}
+
+.header .nav .container-button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 20%;
+}
+
+.header .nav .container-button button {
+    background: linear-gradient(60deg, var(--bg-color-btn-light) 0%, var(--bg-color-btn-dark) 100%);
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    border: none;
+    padding: 10px 22px;
+    cursor: pointer;
+    font-size: var(--font-size-paragraph - 5px);
+}
+
+.header .nav .container-button button:hover {
+    background: linear-gradient(90deg, var(--bg-color-btn-dark) 0%, var(--bg-color-btn-light) 100%);
+}
+
+
+
+
+/* Sección home */
+.section-home {
+    width: 100%;
+    max-width: 1300px;
+    height: 100vh;
+    max-height: 700px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 30px;
+}
+
+.section-home .container-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    width: 50%;
+    height: 100%;
+}
+
+.section-home .container-text h1 {
+    font-size: var(--font-size-big-title);
+    position: relative;
+    left: 150px;
+    opacity: 0;
+}
+
+.section-home .container-text p {
+    font-size: var(--font-size-paragraph);
+    line-height: 1.6;
+    position: relative;
+    left: 150px;
+    opacity: 0;
+}
+
+.section-home .container-text button {
+    background: linear-gradient(60deg, var(--bg-color-btn-light) 0%, var(--bg-color-btn-dark) 100%);
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    width: 170px;
+    height: 40px;
+    border: none;
+    font-size: var(--font-size-paragraph);
+    position: relative;
+    left: 150px;
+    opacity: 0;
+}
+
+.section-home .container-text button:hover {
+    background: linear-gradient(90deg, var(--bg-color-btn-dark) 0%, var(--bg-color-btn-light) 100%);
+    cursor: pointer;
+}
+
+.section-home .container-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+
+}
+
+.section-home .container-images img {
+    width: 100%;
+    position: relative;
+    left: 150px;
+    opacity: 0;
+}
+
+.elemento-1 {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 30px;
+    height: fit-content;
+}
+
+.elemento-2 {
+    position: absolute;
+    bottom: 95px;
+    right: 0;
+    width: 30px;
+    height: fit-content;
+}
+
+.elemento-3 {
+    position: absolute;
+    top: 40px;
+    right: 315px;
+    width: 30px;
+    height: fit-content;
+}
+
+
+
+/* Sección specialization areas */
+.specialization-areas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1300px;
+    height: 90vh;
+    max-height: 700px;
+    gap: 60px;
+}
+
+
+.specialization-areas h2 {
+    font-size: var(--font-size-middle-title);
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.specialization-areas .container-items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    bottom: -150px;
+    opacity: 0;
+}
+
+.specialization-areas .container-items .items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+    height: 300px;
+
+
+}
+
+.specialization-areas .container-items .items .container-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 110px;
+    height: 110px;
+    padding: 30px;
+    border-radius: 100%;
+    border: 1px solid white;
+    background: linear-gradient(60deg, var(--bg-color-btn-dark) 0%, #bc34df 100%);
+    box-shadow: 0 0 25px 5px rgba(118, 20, 255, 0.7);
+    transition: all 0.3s ease-in-out;
+    top: 0;
+}
+
+.specialization-areas .container-items .items:hover .container-img {
+    top: -10px;
+    box-shadow: 0 0 25px 10px rgba(118, 20, 255, 0.7);
+}
+
+.specialization-areas .container-items .items .container-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 20px 0px 0px;
+    width: 320px;
+    height: 200px;
+    background: linear-gradient(180deg, #1b0f4e 0%, var(--bg-color) 100%);
+    box-shadow: 0 -32px 40px -5px rgba(118, 20, 255, 0.7);
+    font-size: var(--font-size-middle-title);
+    transition: all 0.3s ease-in-out;
+}
+
+.specialization-areas .container-items .items:hover .container-text {
+    box-shadow: 0 -32px 40px 0px rgba(118, 20, 255, 0.7);
+}
+
+
+
+/* About us */
+.section-about-us {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 0 90px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 20px;
+}
+
+.section-about-us .container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.section-about-us .container .container-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 10px;
+}
+
+.section-about-us .container .epigrafe {
+    font-size: var(--font-size-paragraph);
+
+}
+
+.section-about-us .container .container-text h2 {
+    background: linear-gradient(45deg, #ffc6d7, #4b5bdb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: var(--font-size-big-title);
+}
+
+
+
+.section-about-us .container .container-text .parrafo {
+    width: 100%;
+    font-size: var(--font-size-paragraph);
+    line-height: 1.6;
+}
+
+.section-about-us .container .container-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.section-about-us .container .container-img img {
+    width: 100%;
+}
+
+
+
+
+
+
+/* Sección companies */
+.section-companies {
+    width: 100%;
+    max-width: 1300px;
+    /* height: 110vh; */
+    /* max-height: 700px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 30px;
+}
+
+.section-companies .container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.section-companies .container-text h3 {
+    font-size: var(--font-size-big-title);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.section-companies .container-text .row {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.section-companies .container-text .row-1 {
+    top: 20%;
+    animation: move-right 60s linear infinite;
+}
+
+.section-companies .container-text .row-2 {
+    top: 50%;
+    animation: move-left 60s linear infinite;
+}
+
+.section-companies .container-text .row img {
+    width: 100px;
+    height: min-content;
+}
+
+/* Animations */
+@keyframes move-right {
+    0% {
+        transform: translateX(-40%);
+    }
+
+    100% {
+        transform: translateX(35%);
+    }
+}
+
+@keyframes move-left {
+    0% {
+        transform: translateX(35%);
+    }
+
+    100% {
+        transform: translateX(-40%);
+    }
+}
+
+.section-companies .container-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.section-companies .container-button button {
+    background: linear-gradient(60deg, var(--bg-color-btn-light) 0%, var(--bg-color-btn-dark) 100%);
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    width: 170px;
+    height: 40px;
+    border: none;
+    font-size: var(--font-size-paragraph);
+}
+
+.section-companies .container-button button:hover {
+    background: linear-gradient(90deg, var(--bg-color-btn-dark) 0%, var(--bg-color-btn-light) 100%);
+    cursor: pointer;
+}
+
+.section-companies .elemento-1 {
+    position: absolute;
+    top: 40px;
+    left: 20%;
+}
+
+
+
+
+/* Sección neural sales */
+.section-neural-sales {
+    width: 100%;
+    max-width: 1300px;
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 20px;
+}
+
+
+
+.section-neural-sales .container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* height: max-content; */
+}
+
+.section-neural-sales .container .container-text {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 10px;
+}
+
+.section-neural-sales .container .container-text .epigrafe {
+    font-size: var(--font-size-paragraph);
+}
+
+.section-neural-sales .container .container-text h2 {
+    font-size: var(--font-size-big-title);
+}
+
+.section-neural-sales .container .container-text h2 span {
+    display: block;
+    background: linear-gradient(45deg, #ffc6d7, #4b5bdb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: var(--font-size-big-title);
+}
+
+.section-neural-sales .container .container-text .parrafo {
+    width: 100%;
+    font-size: var(--font-size-paragraph);
+    line-height: 1.6;
+}
+
+.section-neural-sales .container .container-button {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    width: 30%;
+    height: 100%;
+}
+
+.section-neural-sales .container .container-button button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(60deg, var(--bg-color-btn-light) 0%, var(--bg-color-btn-dark) 100%);
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: var(--font-size-paragraph);
+}
+
+.section-neural-sales .container .container-button button:hover {
+    background: linear-gradient(90deg, var(--bg-color-btn-dark) 0%, var(--bg-color-btn-light) 100%);
+}
+
+.section-neural-sales .container-img {
+    width: 100%;
+}
+
+.section-neural-sales .container-img img {
+    width: 100%;
+}
+
+
+/* Sección automated solutions */
+.section-automated-solutions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1300px;
+    margin-top: 20px;
+}
+
+.section-automated-solutions .container {
+    display: grid;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 20px;
+    gap: 12px;
+}
+
+.section-automated-solutions .container .items {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    padding: 15px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #cb70fc;
+    border-radius: 15px;
+    gap: 25px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    position: relative;
+    top: 150px;
+}
+
+.section-automated-solutions .container .items:hover {
+    box-shadow: 0 0 20px 5px rgba(118, 20, 255, 0.7);
+}
+
+.section-automated-solutions .container .items:nth-child(1),
+.section-automated-solutions .container .items:nth-child(2),
+.section-automated-solutions .container .items:nth-child(3),
+.section-automated-solutions .container .items:nth-child(4) {
+    grid-column: span 2;
+}
+
+.section-automated-solutions .container .items:nth-child(5) {
+    grid-column: 2 / span 2;
+}
+
+.section-automated-solutions .container .items .container-text {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+    gap: 15px;
+}
+
+.section-automated-solutions .container .items .container-text p {
+    text-align: start;
+    line-height: 1.6;
+    font-size: var(--font-size-paragraph);
+
+}
+
+.section-automated-solutions .container .items .container-text ul {
+    display: flex;
+    align-items: start;
+}
+
+.section-automated-solutions .container .items .container-text ul li {
+    margin-left: 20px;
+    text-align: start;
+    font-size: var(--font-size-paragraph);
+}
+
+
+/* Sección neural operations */
+.section-neural-operations {
+    width: 100%;
+    max-width: 1300px;
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.section-neural-operations .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.section-neural-operations .container .container-text {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 10px;
+}
+
+.section-neural-operations .container .epigrafe {
+    font-size: var(--font-size-paragraph);
+
+}
+
+.section-neural-operations .container .container-text h2 {
+    font-size: var(--font-size-big-title);
+}
+
+.section-neural-operations .container .container-text h2 span {
+    display: block;
+    background: linear-gradient(45deg, #ffc6d7, #4b5bdb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: var(--font-size-big-title);
+}
+
+.section-neural-operations .container .container-text .parrafo {
+    width: 100%;
+    font-size: var(--font-size-paragraph);
+    line-height: 1.6;
+}
+
+.section-neural-operations .container .container-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 10px;
+    margin-top: 40px;
+}
+
+.section-neural-operations .container .container-options .item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top: 150px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+
+}
+
+.section-neural-operations .container .container-options .item:hover {
+    top: 130px;
+}
+
+.section-neural-operations .container .container-options .item .container-img {
+    background-color: rgb(230, 230, 230);
+    width: 100%;
+    height: 360px;
+    border-radius: 15px;
+}
+
+.section-neural-operations .container .container-options .item .container-img img,
+.section-neural-operations .container .container-options .item .container-img video {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.section-neural-operations .container .container-options .item .container-text {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.section-neural-operations .container .container-options .item .container-text h1 {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    text-align: start;
+    font-size: var(--font-size-middle-title) -10px;
+    gap: 10px;
+}
+
+.section-neural-operations .container .container-options .item .container-text h1 img {
+    width: 25px;
+    height: 25px;
+    transition: all 0.2s ease-in-out;
+}
+
+.section-neural-operations .container .container-options .item:hover .container-text h1 img {
+    width: 40px;
+    height: 25px;
+}
+
+.section-neural-operations .container .container-options .item .container-text p {
+    text-align: start;
+    padding-left: 35px;
+    width: 100%;
+    font-size: var(--font-size-paragraph);
+
+}
+
+
+
+
+/* Sección neural marketing */
+.section-neural-marketing {
+    width: 100%;
+    max-width: 1300px;
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.section-neural-marketing .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 335px;
+}
+
+.section-neural-marketing .container .container-text {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 10px;
+}
+
+.section-neural-marketing .container .container-text h2 {
+    font-size: var(--font-size-big-title);
+}
+
+.section-neural-marketing .container .container-text h2 span {
+    display: block;
+    background: linear-gradient(45deg, #ffc6d7, #4b5bdb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: var(--font-size-big-title);
+}
+
+.section-neural-marketing .container .container-text .parrafo {
+    width: 100%;
+    font-size: var(--font-size-paragraph);
+    line-height: 1.6;
+}
+
+.section-neural-marketing .container .elemento-1 {
+    position: absolute;
+    top: 25px;
+    left: calc(100% - 25px);
+}
+
+.section-neural-marketing .container-marketing-services {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.section-neural-marketing .container-marketing-services .item {
+    background-color: #130e25;
+    border: 1px solid #474747;
+    border-radius: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: var(--font-size-paragraph);
+    font-weight: bold;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    top: 150px;
+    opacity: 0;
+}
+
+.section-neural-marketing .container-marketing-services .item:hover {
+    top: 130px;
+}
+
+.section-neural-marketing .container-marketing-services .item .container-img {
+    width: 100%;
+}
+
+.section-neural-marketing .container-marketing-services .item .container-img img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.section-neural-marketing .container-marketing-services .item .container-text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 10px 15px 30px 15px;
+    text-align: start;
+    width: 100%;
+}
+
+.section-neural-marketing .container-marketing-services .item .container-text h3 {
+    font-size: var(--font-size-middle-title);
+}
+
+.section-neural-marketing .container-marketing-services .item .container-text p {
+    font-size: var(--font-size-paragraph);
+    font-weight: lighter;
+}
+
+.section-neural-marketing .container-marketing-services .item .container-text ul li {
+    margin-left: 18px;
+    font-size: var(--font-size-paragraph);
+    font-weight: lighter;
+}
+
+.section-neural-marketing .container-marketing-services .item:nth-child(1),
+.section-neural-marketing .container-marketing-services .item:nth-child(2),
+.section-neural-marketing .container-marketing-services .item:nth-child(3) {
+    grid-column: span 2;
+}
+
+.section-neural-marketing .container-marketing-services .item:nth-child(4),
+.section-neural-marketing .container-marketing-services .item:nth-child(5) {
+    grid-column: span 3;
+}
+
+.section-neural-marketing .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 80%;
+    height: 75vh;
+    max-height: 700px;
+}
+
+.section-neural-marketing .footer h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.section-neural-marketing .footer h1 span {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.section-neural-marketing .footer button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(60deg, var(--bg-color-btn-light) 0%, var(--bg-color-btn-dark) 100%);
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: var(--font-size-paragraph);
+}
+
+.section-neural-marketing .footer button:hover {
+    background: linear-gradient(90deg, var(--bg-color-btn-dark) 0%, var(--bg-color-btn-light) 100%);
+}
+
+
+
+
+/* Sección history */
+.section-history {
+    width: 100%;
+    max-width: 1300px;
+    height: 70vh;
+    max-height: 700px;
+    margin-top: 70px;
+    gap: 20px;
+}
+
+.section-history .container-text {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 10px;
+}
+
+.section-history .container-text .epigrafe {
+    font-size: var(--font-size-paragraph);
+}
+
+.section-history .container-text h2 {
+    font-size: var(--font-size-big-title);
+}
+
+.section-history .container-text h2 span {
+    display: block;
+    background: linear-gradient(45deg, #ffc6d7, #4b5bdb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: var(--font-size-big-title);
+}
+
+.section-history .container-text .parrafo {
+    width: 100%;
+    font-size: var(--font-size-paragraph);
+    line-height: 1.6;
+}
+
+
+
+/* Sección user feedback */
+.section-user-feedback {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1300px;
+    /* height: 100vh; */
+    margin-top: 70px;
+}
+
+.section-user-feedback .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.section-user-feedback .container .item {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+    width: 490px;
+    min-height: 500px;
+    background-color: #cb70fc;
+    padding: 25px;
+    border-radius: 15px;
+    position: relative;
+    top: 150px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.section-user-feedback .container .item:hover {
+    top: 130px;
+}
+
+.section-user-feedback .container .item .container-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -65px;
+}
+
+.section-user-feedback .container .item .container-img img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.section-user-feedback .container .item .container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 50px;
+}
+
+.section-user-feedback .container .item .container-text h4 {
+    font-size: var(--font-size-middle-title);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-user-feedback .container .item .container-text p {
+    font-size: var(--font-size-paragraph);
+    text-align: center;
+}
+
+.section-user-feedback .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    gap: 60px;
+}
+
+.section-user-feedback .text-container h1 {
+    font-size: var(--font-size-big-title);
+    text-align: center;
+}
+
+.section-user-feedback .text-container h1 span {
+    font-weight: bold;
+}
+
+.section-user-feedback .text-container button {
+    background: linear-gradient(60deg, var(--bg-color-btn-light) 0%, var(--bg-color-btn-dark) 100%);
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: var(--font-size-paragraph);
+}
+
+.section-user-feedback .text-container button:hover {
+    background: linear-gradient(90deg, var(--bg-color-btn-dark) 0%, var(--bg-color-btn-light) 100%);
+}
+
+
+
+
+/* Sección digital trasnform */
+.section-digital-transform {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+    height: 100vh;
+    max-height: 650px;
+    margin-top: 70px;
+    background-color: #110630;
+    border-radius: 20px;
+    padding: 0 40px;
+}
+
+.section-digital-transform .container-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 60%;
+    gap: 60px;
+}
+
+.section-digital-transform .container-text h1 {
+    font-size: 50px;
+}
+
+.section-digital-transform .container-text p {
+    font-size: var(--font-size-paragraph);
+}
+
+.section-digital-transform .container-text button {
+    width: 180px;
+    background: linear-gradient(60deg, var(--bg-color-btn-light) 0%, var(--bg-color-btn-dark) 100%);
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    border: none;
+    padding: 12px 24px;
+    font-size: var(--font-size-paragraph);
+    cursor: pointer;
+}
+
+.section-digital-transform .container-text button:hover {
+    background: linear-gradient(90deg, var(--bg-color-btn-dark) 0%, var(--bg-color-btn-light) 100%);
+
+}
+
+.section-digital-transform .container-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.section-digital-transform .container-img img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* Section partner */
+.section-partnership {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1300px;
+    height: 100%;
+    max-height: 650px;
+    margin-top: 70px;
+    gap: 50px;
+}
+
+.section-partnership .container-text {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 10px;
+}
+
+.section-partnership .container-text .epigrafe {
+    font-size: var(--font-size-paragraph);
+}
+
+.section-partnership .container-text h1 {
+    font-size: var(--font-size-big-title);
+}
+
+.section-partnership .container-img {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.section-partnership .container-img img {
+    width: 25%;
+}
+
+.section-partnership .container-img .img-cruz {
+    width: 60px;
+
+}
+
+/* Sección footer */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    margin-top: 90px;
+    border-top: 1px solid #474747;
+    width: 100%;
+}
+
+.footer .container-logo img {
+    width: 120px;
+}
+
+.footer .ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style-type: none;
+}
+
+.footer .ul-2 li:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.footer .ul li a {
+    text-decoration: none;
+    font-size: var(--font-size-paragraph);
+}
+
+.footer ul li:hover a {
+    color: var(--bg-color-btn-dark);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+/* MEDIA QUERIES */
+/* MEDIA QUERIES */
+
+@media (max-width: 1150px) {
+
+    /* Estilos header */
+    .header .nav-mobile .ul-mobile {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        gap: 15px;
+        list-style-type: none;
+        width: fit-content;
+        min-height: 400px;
+        padding: 10px 40px;
+        background-color: #cb70fc;
+        z-index: 10;
+    }
+
+    .header .nav-mobile .container-logo img {
+        width: 120px;
+    }
+
+    .header .nav-mobile .ul-mobile div {
+        width: 100%;
+        height: 1.5px;
+        background-color: white;
+    }
+
+    .header .nav-mobile .ul-mobile li a {
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        font-size: var(--font-size-paragraph);
+    }
+
+    .header .nav-mobile .ul-mobile li a:hover {
+        color: var(--bg-color-btn-dark);
+    }
+
+    .header .nav-mobile .container-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .header .nav-mobile .container-menu-btn img {
+        width: 60%;
+        cursor: pointer;
+    }
+
+
+
+    /* Sección home */
+    .section-home .container-text {
+        gap: 30px;
+    }
+
+    .section-home .container-text h1 {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-home .container-text p {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-home .container-text button {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .elemento-2 {
+        right: -20px;
+    }
+
+
+
+
+    /* Sección specialization areas */
+    .specialization-areas {
+        gap: 50px;
+    }
+
+    .specialization-areas .container-items .items .container-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .specialization-areas .container-items .items .container-img img {
+        width: 100%;
+    }
+
+    .specialization-areas .container-items .items .container-text {
+        width: 250px;
+        height: 140px;
+        font-size: var(--font-size-middle-title-1100px);
+    }
+
+
+
+
+    /* About us */
+    .section-about-us .container .epigrafe {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-about-us .container .container-text h2 {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-about-us .container .container-text .parrafo {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+
+
+    /* Sección companies */
+    .section-companies .container-text .row img {
+        width: 80px;
+    }
+
+    .section-companies .container-text h3 {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-companies .container-button button {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-companies .elemento-1 {
+        display: none;
+    }
+
+
+
+    /* Sección neural sales */
+    .section-neural-sales .container .container-text .epigrafe {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-neural-sales .container .container-text h2 {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-neural-sales .container .container-text h2 span {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-neural-sales .container .container-text .parrafo {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-neural-sales .container .container-button button {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+
+
+
+
+    /* Sección automated solutions */
+    .section-automated-solutions .container {
+        width: 100%;
+        /**/
+    }
+
+    .section-automated-solutions .container .items {
+        height: 260px;
+        /**/
+        padding: 10px 20px;
+        /**/
+    }
+
+    .section-automated-solutions .container .items .container-text h1 {
+        font-size: var(--font-size-middle-title-1100px);
+    }
+
+    .section-automated-solutions .container .items .container-text p {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-automated-solutions .container .items .container-text ul li {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+
+
+
+
+    /* Sección neural operations */
+    .section-neural-operations .container .epigrafe {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-neural-operations .container .container-text h2 {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-neural-operations .container .container-text h2 span {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-neural-operations .container .container-text .parrafo {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-neural-operations .container .container-options .item .container-text h1 {
+        font-size: var(--font-size-middle-title-1100px);
+    }
+
+    .section-neural-operations .container .container-options .item .container-text p {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+    .section-neural-operations .container .container-options .item .container-img {
+        height: 270px;
+    }
+
+
+
+
+    /* Sección neural marketing */
+    .section-neural-marketing .container .container-text h2 {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-neural-marketing .container .container-text h2 span {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-neural-marketing .container .container-text .parrafo {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-neural-marketing .container .elemento-1 {
+        top: 40px;
+    }
+
+    .section-neural-marketing .container .elemento-1 img {
+        height: 110px;
+    }
+
+    .section-neural-marketing .container-marketing-services .item .container-text h3 {
+        font-size: var(--font-size-middle-title-1100px);
+    }
+
+    .section-neural-marketing .container-marketing-services .item .container-text p {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-neural-marketing .container-marketing-services .item .container-text ul li {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-neural-marketing .footer h1 {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-neural-marketing .footer h1 span {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-neural-marketing .footer button {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+
+
+
+    /* Sección history */
+    .section-history {
+        height: fit-content;
+    }
+
+
+    .section-history .container-text .epigrafe {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-history .container-text h2 {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-history .container-text h2 span {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-history .container-text .parrafo {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+
+
+
+
+
+
+
+    /* Sección user feedback */
+    .section-user-feedback .container .item {
+        width: 350px;
+        min-height: 380px;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .section-user-feedback .container .item .container-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .section-user-feedback .container .item .container-img img {
+        width: 100%;
+    }
+
+    .section-user-feedback .container .item .container-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .section-user-feedback .container .item .container-text img {
+        width: 40px;
+    }
+
+    .section-user-feedback .container .item .container-text h4 {
+        font-size: var(--font-size-middle-title-1100px);
+        margin-bottom: 15px;
+    }
+
+    .section-user-feedback .container .item .container-text p {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-user-feedback .container .item .container-text p span {
+        font-size: var(--font-size-paragraph-1100px) + 4px;
+        font-weight: bold;
+    }
+
+    .section-user-feedback .text-container h1 {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-user-feedback .text-container button {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+
+
+
+    /* Sección digital trasnform */
+    .section-digital-transform {
+        max-height: 550px;
+        /**/
+    }
+
+    .section-digital-transform .container-text h1 {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+    .section-digital-transform .container-text p {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-digital-transform .container-text button {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+
+    /* Section partner */
+    .section-partnership .container-text .epigrafe {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+
+    .section-partnership .container-text h1 {
+        font-size: var(--font-size-big-title-1100px);
+    }
+
+
+    /* Sección footer */
+    .footer .ul li a {
+        font-size: var(--font-size-paragraph-1100px);
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 940px) {
+
+    /* Estilos header */
+    .header .nav .container-logo {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .header .nav .ul li a {
+        font-size: var(--font-size-paragraph-900px - 15px);
+    }
+
+    .header .nav .container-button button {
+        font-size: var(--font-size-paragraph-900px - 5px);
+    }
+
+
+
+
+    /* Sección home */
+    .section-home {
+        align-items: center;
+    }
+
+    .section-home .container-text h1 {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-home .container-text p {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-home .container-text button {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-home .container-images {
+        height: auto;
+    }
+
+    .section-home .container-images img {
+        padding-bottom: 10vh;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* Sección specialization areas */
+    .specialization-areas {
+        gap: 30px;
+        height: 100%;
+        margin: 0px 0px 50px 0px ;
+    }
+
+    .specialization-areas h2 {
+        font-size: var(--font-size-middle-title-900px);
+    }
+
+    .specialization-areas .container-items .items .container-img {
+        padding: 20px;
+    }
+
+    .specialization-areas .container-items .items .container-text {
+        font-size: var(--font-size-middle-title-900px);
+        width: 200px;
+        height: 120px;
+    }
+
+
+
+
+    /* About us */
+    .section-about-us .container .epigrafe {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-about-us .container .container-text h2 {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-about-us .container .container-text .parrafo {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+
+
+
+
+
+    /* Sección companies */
+    .section-companies .container-text h3 {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-companies .container-text .row {
+        gap: 50px;
+    }
+
+    .section-companies .container-button button {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+
+
+
+
+
+    /* Sección neural sales */
+    .section-neural-sales .container .container-text .epigrafe {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-neural-sales .container .container-text h2 {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-neural-sales .container .container-text h2 span {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-neural-sales .container .container-text .parrafo {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-neural-sales .container .container-button button {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+
+
+
+
+
+
+
+
+
+    /* Sección automated solutions */
+    .section-automated-solutions .container .items {
+        padding: 10px;
+        height: 240px;
+    }
+
+    .section-automated-solutions .container .items .container-text p {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-automated-solutions .container .items .container-text ul li {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Sección neural operations */
+    .section-neural-operations .container .epigrafe {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-neural-operations .container .container-text h2 {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-neural-operations .container .container-text h2 span {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-neural-operations .container .container-text .parrafo {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-neural-operations .container .container-options .item .container-text h1 {
+        font-size: var(--font-size-middle-title-900px);
+    }
+
+    .section-neural-operations .container .container-options .item .container-text p {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+
+
+
+
+
+
+
+
+
+    /* Sección neural marketing */
+    .section-neural-marketing .container .container-text h2 {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-neural-marketing .container .container-text h2 span {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-neural-marketing .container .container-text .parrafo {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-neural-marketing .container-marketing-services .item .container-text p {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-neural-marketing .container-marketing-services .item .container-text ul li {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-neural-marketing .footer h1 {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-neural-marketing .footer h1 span {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-neural-marketing .footer button {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+
+
+
+
+
+
+
+    /* Sección history */
+    .section-history .container-text .epigrafe {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-history .container-text h2 {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-history .container-text h2 span {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-history .container-text .parrafo {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Sección user feedback */
+    .section-user-feedback .container .item {
+        width: 300px;
+
+        min-height: 370px;
+    }
+
+    .section-user-feedback .container .item .container-text {
+        margin-top: 20px;
+    }
+
+    .section-user-feedback .container .item .container-text h4 {
+        font-size: var(--font-size-middle-title-900px);
+    }
+
+    .section-user-feedback .container .item .container-text p {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-user-feedback .container .item .container-text p span {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-user-feedback .text-container h1 {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-user-feedback .text-container button {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+
+
+
+
+
+
+    /* Sección digital trasnform */
+    .section-digital-transform {
+        height: 500px;
+    }
+
+    .section-digital-transform .container-text h1 {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+    .section-digital-transform .container-text p {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-digital-transform .container-text button {
+        font-size: var(--font-size-paragraph-900px);
+
+    }
+
+
+
+
+
+    /* Sección footer */
+    .footer .ul li a {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+    /* Estilos generales */
+    body {
+        margin: 0 8%;
+    }
+
+
+
+    /* Estilos header */
+    /* Estilos header */
+    .header .nav {
+        display: none;
+    }
+
+    .header .nav-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 20px 0 20px 0;
+        width: 100%;
+    }
+
+    .header .nav-mobile .ul-mobile {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        gap: 15px;
+        list-style-type: none;
+        width: fit-content;
+        min-height: 400px;
+        padding: 10px 40px;
+        background-color: #cb70fc;
+        z-index: 10;
+    }
+
+    .header .nav-mobile .ul-mobile div {
+        width: 100%;
+        height: 1.5px;
+        background-color: white;
+    }
+
+    .header .nav-mobile .ul-mobile li a {
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        font-size: var(--font-size-paragraph);
+    }
+
+    .header .nav-mobile .ul-mobile li a:hover {
+        color: var(--bg-color-btn-dark);
+    }
+
+    .header .nav-mobile .container-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .header .nav-mobile .container-menu-btn img {
+        width: 60%;
+        cursor: pointer;
+    }
+
+
+
+
+
+    /* Sección home */
+    .section-home {
+        margin: 50px 0 25px 0;
+        height: 100vh;
+        flex-direction: column;
+
+    }
+
+    .section-home .container-text {
+        width: 80%;
+    }
+
+    .section-home .container-images {
+        width: 100%;
+    }
+
+    .section-home .elemento-1,
+    .section-home .elemento-2,
+    .section-home .elemento-3 {
+        display: none;
+    }
+
+
+
+
+
+    /* Sección specialization areas */
+    .specialization-areas {
+        max-height: 100%;
+        height: 90%;
+        margin: 50px 0 25px 0;
+        text-align: center;
+    }
+
+    .specialization-areas .container-items {
+        flex-direction: column;
+    }
+
+    .specialization-areas .container-items .items {
+        gap: 30px;
+    }
+
+
+    /* About us */
+    .section-about-us {
+
+    }
+
+    .section-about-us .container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .section-about-us .container .container-text {
+        width: 100%;
+    }
+
+    .section-about-us .container .epigrafe {
+
+    }
+
+    .section-about-us .container .container-text h2 {
+
+    }
+
+
+
+    .section-about-us .container .container-text .parrafo {
+
+    }
+
+    .section-about-us .container .container-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .section-about-us .container .container-img img {
+
+    }
+
+
+
+
+    /* Sección automated solutions */
+    .section-automated-solutions .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    /* companies */
+
+
+
+
+
+
+    /* Sección neural operations */
+
+    .section-neural-operations .container .container-options {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-neural-operations .container .container-options .item {
+        width: 95%;
+    }
+
+    .section-neural-operations .container .container-options .item .container-img {
+        height: 260px;
+    }
+
+
+
+
+
+    /* Sección neural marketing */
+    .section-neural-marketing .container-marketing-services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-neural-marketing .container-marketing-services .item {
+        width: 70%;
+    }
+
+    .section-neural-marketing .footer {
+        margin-top: 0px;
+        border: none;
+    }
+
+    .section-neural-marketing .footer h1 {
+        font-size: 25px;
+    }
+
+    .section-neural-marketing .footer h1 span {
+        font-size: 25px;
+    }
+
+
+
+
+
+
+
+
+
+    /* Sección user feedback */
+    .section-user-feedback .container {
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .section-user-feedback .container .item {
+        width: 280px;
+    }
+
+
+
+
+    /* History */
+    .section-history .container-text {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+
+
+    /* Sección digital trasnform */
+    .section-digital-transform {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        max-height: 100%;
+        height: 100%;
+        margin-top: 70px;
+        padding: 30px;
+    }
+
+    .section-digital-transform .container-text {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .section-digital-transform .container-text h1 {
+        width: 100%;
+    }
+
+    .section-digital-transform .container-img {
+        height: 100%;
+        width: 100%;
+    }
+
+
+    /* Section partner */
+    .section-partnership .container-text .epigrafe {
+        font-size: var(--font-size-paragraph-900px);
+    }
+
+    .section-partnership .container-text h1 {
+        font-size: var(--font-size-big-title-900px);
+    }
+
+
+}
+
+/* 
+para titulos 
+Space Grotesk regular
+para los titulitos de arriba de los titulos viste q tienen letra rara
+DM Sans
+para parrafos
+DM Sans regular 
+*/

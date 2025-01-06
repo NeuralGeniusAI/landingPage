@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Genius</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://kit.fontawesome.com/ec56df5e4e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="fondo-body">
+        <img src="imagenes/gradiente.svg" alt="">
+    </div>
+    <a href="https://whatsapp.com" class="container-wpp">
+        <img src="imagenes/WhatsApp.svg.webp" alt="">
+    </a>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="#section-home" class="container-logo">
+                <img src="imagenes/Logo_Neural_Genius.webp" alt="">
+            </a>
+            <ul class="ul">
+                <li><a href="#section-home">Inicio</a></li>
+                <li><a href="#section-about-us">Sobre nosotros</a></li>
+                <li class="services">
+                    <a href="">Servicios</a>
+                    <ul class="mini-menu">
+                        <li><a href="#section-neural-sales">Neural sales</a></li>
+                        <li><a href="#section-neural-operations">Neural operations</a></li>
+                        <li><a href="#section-neural-marketing">Neural marketing</a></li>
+                    </ul>
+                </li>
+                <li><a href="#section-footer">Contacto</a></li>
+            </ul>
+            <div class="container-button">
+                <button>CONTACTANOS</button>
+            </div>
+        </nav>
+        <nav class="nav-mobile">
+            <div class="container-logo">
+                <img src="imagenes/Logo_Neural_Genius.webp" alt="">
+            </div>
+            <div class="container-menu-btn" onclick="toggleMenu()">
+                <img src="imagenes/Group 427320607.svg" alt="">
+            </div>
+            <ul class="ul-mobile">
+                <li><a href="#section-home">Inicio</a></li>
+                <div></div>
+                <li><a href="#section-about-us">Sobre nosotros</a></li>
+                <div></div>
+                <li><a href="#section-neural-sales">Neural sales</a></li>
+                <div></div>
+                <li><a href="#section-neural-operations">Neural operations</a></li>
+                <div></div>
+                <li><a href="#section-neural-marketing">Neural marketing</a></li>
+                <div></div>
+                <li><a href="#section-footer">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- First section / home -->
+    <section class="section-home" id="section-home">
+        <div class="container-text">
+            <h1>IA para elevar tus procesos y ventas</h1>
+            <p>Elevamos a las empresas simplificando la automatización de procesos con Inteligencia Artificial mediante
+                soluciones flexibles implementadas de manera ágil, que se adaptan a tu flujo operativo y evolucionan con
+                tu empresa.</p>
+            <button>Agendar reunion</button>
+        </div>
+        <div class="container-images">
+            <img src="imagenes/animacion1Home.gif" alt="">
+        </div>
+        <div class="elemento-1">
+            <img src="imagenes/Group 1.svg" alt="Descripción del SVG">
+        </div>
+        <div class="elemento-2">
+            <img src="imagenes/Group 1.svg" alt="Descripción del SVG">
+        </div>
+        <div class="elemento-3">
+            <img src="imagenes/Rectangle 7.svg" alt="Descripción del SVG">
+        </div>
+    </section>
+
+    <!-- Second section / specialization-areas -->
+    <section class="specialization-areas">
+        <h2>DESCUBRE NUESTRAS ÁREAS DE ESPECIALIZACIÓN</h2>
+        <div class="container-items">
+            <div class="items">
+                <div class="container-img">
+                    <img src="imagenes/image 52.svg" alt="">
+                </div>
+                <div class="container-text">
+                    <p>Neural Marketing</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="container-img">
+                    <img src="imagenes/image 51.svg" alt="">
+                </div>
+                <div class="container-text">
+                    <p>Neural sales</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="container-img">
+                    <img src="imagenes/Vector.svg" alt="">
+                </div>
+                <div class="container-text">
+                    <p>Neural operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About us -->
+
+    <section class="section-about-us" id="section-about-us">
+        <div class="container">
+            <div class="container-img">
+                <img src="imagenes/animacion2.gif" alt="">
+            </div>
+            <div class="container-text">
+                <p class="epigrafe">IMPULSAMOS TU EMPRESA A LA NUEVA ERA</p>
+                <h2>Sobre nosotros</h2>
+                <p class="parrafo">Neural Genius es una consultora especializada en agentes inteligentes, programas de capacitación en productividad empresarial mediante el uso de Inteligencia Articial, centros de atención al cliente potenciados por IA y soluciones de Realidades Mixtas (realidad aumentada y realidad virtual) para empresas en Latinoamérica.
+                    Nuestro objetivo es ayudar a las empresas a mejorar su rendimiento y transformar la interacción con sus clientes mediante herramientas tecnológicas innovadoras, por medio de nuestro conocimiento profundo y experiencia en IA y entornos virtuales, lo que nos permite diseñar soluciones personalizadas y efectivas para cada cliente</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Third section / companies -->
+    <section class="section-companies">
+        <div class="container-text">
+            <h3>Empresas que confian en nosotros</h3>
+            <div class="row row-1">
+                <img src="imagenes/logos-empresas/tupi.png" alt="">
+                <img src="imagenes/logos-empresas/277588479_350407177137484_341671929977059204_n-removebg-preview.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/292372966_473643884764064_4777873810564023123_n-removebg-preview.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/299283969_754028322461090_2878902148217531568_n__1_-removebg-preview.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/326273787_3486444818345943_5827986841737261867_n-removebg-preview.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/327169051_3322426944736577_5470446526182496200_n-removebg-preview.png"
+                    alt="">
+
+                <!-- <img src="imagenes/logos-empresas/327335976_501622078564309_573319848519133554_n-removebg-preview.png alt=""> -->
+                <img src=" imagenes/logos-empresas/465744669_27578212371793650_6060478900962367412_n.png" alt="">
+                <img src="imagenes/logos-empresas/49691956_2438555072884920_3472541295732326400_n-removebg-preview.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/Arcor_logo.svg.png" alt="">
+                <img src="imagenes/logos-empresas/C9N_LOGO.png" alt="">
+                <img src="imagenes/logos-empresas/Captura_de_pantalla_2025-01-05_143753-removebg-preview.png" alt="">
+                <img src="imagenes/logos-empresas/Captura_de_pantalla_2025-01-05_144130-removebg-preview.png" alt="">
+                <img src="imagenes/logos-empresas/Captura_de_pantalla_2025-01-05_161521-removebg-preview.png" alt="">
+                <img src="imagenes/logos-empresas/COMPANY_7900105a-a925-46d2-8e3b-5fe956db3e18_131feec3-0103-4b63-a94a-9a9d23ccf5d7.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/cropped-Logo_NPY_WHITE-1-300x77.png" alt="">
+                <img src="imagenes/logos-empresas/326273787_3486444818345943_5827986841737261867_n-removebg-preview.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/dncp-1024x307.png" alt="">
+                <img src="imagenes/logos-empresas/RCLogo.svg.png" alt="">
+                <img src="imagenes/logos-empresas/Samsung_logo_blue-removebg-preview.png" alt="">
+                <img src="imagenes/logos-empresas/SNT_LOGO.png" alt="">
+                <img src="imagenes/logos-empresas/unnamed.png" alt="">
+            </div>
+            <div class="row row-2">
+                <img src="imagenes/logos-empresas/277588479_350407177137484_341671929977059204_n-removebg-preview.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/292372966_473643884764064_4777873810564023123_n-removebg-preview.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/299283969_754028322461090_2878902148217531568_n__1_-removebg-preview.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/326273787_3486444818345943_5827986841737261867_n-removebg-preview.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/327169051_3322426944736577_5470446526182496200_n-removebg-preview.png"
+                    alt="">
+                <!-- <img src="imagenes/logos-empresas/327335976_501622078564309_573319848519133554_n-removebg-preview.png alt=""> -->
+                <img src=" imagenes/logos-empresas/465744669_27578212371793650_6060478900962367412_n.png" alt="">
+                <img src="imagenes/logos-empresas/49691956_2438555072884920_3472541295732326400_n-removebg-preview.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/Arcor_logo.svg.png" alt="">
+                <img src="imagenes/logos-empresas/C9N_LOGO.png" alt="">
+                <img src="imagenes/logos-empresas/Captura_de_pantalla_2025-01-05_143753-removebg-preview.png" alt="">
+                <img src="imagenes/logos-empresas/Captura_de_pantalla_2025-01-05_144130-removebg-preview.png" alt="">
+                <img src="imagenes/logos-empresas/Captura_de_pantalla_2025-01-05_161521-removebg-preview.png" alt="">
+                <img src="imagenes/logos-empresas/COMPANY_7900105a-a925-46d2-8e3b-5fe956db3e18_131feec3-0103-4b63-a94a-9a9d23ccf5d7.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/cropped-Logo_NPY_WHITE-1-300x77.png" alt="">
+                <img src="imagenes/logos-empresas/326273787_3486444818345943_5827986841737261867_n-removebg-preview.png"
+                    alt="">
+                <img src="imagenes/logos-empresas/dncp-1024x307.png" alt="">
+                <img src="imagenes/logos-empresas/RCLogo.svg.png" alt="">
+                <img src="imagenes/logos-empresas/Samsung_logo_blue-removebg-preview.png" alt="">
+                <img src="imagenes/logos-empresas/SNT_LOGO.png" alt="">
+                <img src="imagenes/logos-empresas/tupi.png" alt="">
+                <img src="imagenes/logos-empresas/unnamed.png" alt="">
+            </div>
+        </div>
+        <div class="container-button">
+            <button>Contactanos</button>
+        </div>
+    </section>
+
+
+    <!-- Fourth section / Neural Sales -->
+    <section class="section-neural-sales" id="section-neural-sales">
+        <div class="container">
+            <div class="container-text">
+                <p class="epigrafe">AUTOMATIZA TUS PROCESOS COMERCIALES Y MAXIMIZA CADA OPORTUNIDAD DE VENTA.</p>
+                <h2><span>Neural Sales:</span> Potencia tus Ventas con Automatización Inteligente</h2>
+                <p class="parrafo">Neural Sales está diseñado para empresas grandes que buscan eficiencia en cada
+                    interacción comercial. Nuestras soluciones aseguran que ningún prospecto quede sin atenderse y que
+                    cada oportunidad de venta sea aprovechada al máximo.</p>
+            </div>
+            <div class="container-button">
+                <button>
+                    <p>Contacto</p>
+                </button>
+            </div>
+        </div>
+        <div class="container-img">
+            <img src="imagenes/Image.jpg" alt="">
+        </div>
+    </section>
+
+
+    <!-- Fifth section / automated solutions -->
+    <section class="section-automated-solutions">
+        <div class="container">
+            <div class="items item-1">
+                <div class="container-icon">
+                    <img src="imagenes/cpu.svg" alt="">
+                </div>
+                <div class="container-text">
+                    <h1>CRM con IA</h1>
+                    <p>Centraliza todas las interacciones con clientes, con análisis predictivo y capacidades omnicanal.
+                    </p>
+                    <ul>
+                        <li>Beneficios: Facilita la toma de decisiones estratégicas y mejora la retención.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="items item-2">
+                <div class="container-icon">
+                    <img src="imagenes/cpu.svg" alt="">
+                </div>
+                <div class="container-text">
+                    <h1>Vocana (IA Conversacional)</h1>
+                    <p>Automatiza llamadas comerciales, calificando prospectos y agendando reuniones estratégicas.</p>
+                    <ul>
+                        <li>Beneficios: Incrementa la productividad y mejora la tasa de conversión.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="items item-3">
+                <div class="container-icon">
+                    <img src="imagenes/cpu.svg" alt="">
+                </div>
+                <div class="container-text">
+                    <h1>Agentes inteligentes de Ventas</h1>
+                    <p>Automatizan interacciones en redes sociales y otros canales, respondiendo preguntas frecuentes,
+                        calificando prospectos y organizando seguimientos estratégicos.</p>
+                    <ul>
+                        <li>Beneficios: Ofrecen rapidez, escalabilidad y personalización en tiempo real.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="items item-4">
+                <div class="container-icon">
+                    <img src="imagenes/cpu.svg" alt="">
+                </div>
+                <div class="container-text">
+                    <h1>Seguimiento Automatizado</h1>
+                    <p>Responde automáticamente a comentarios y mensajes en redes sociales, asegurando un flujo
+                        constante de prospectos calificados.</p>
+                    <ul>
+                        <li>Beneficios: Mejora el engagement y acelera la conversión.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="items item-5">
+                <div class="container-icon">
+                    <img src="imagenes/cpu.svg" alt="">
+                </div>
+                <div class="container-text">
+                    <h1>Pautas Inteligente</h1>
+                    <p>Generan insights en tiempo real para optimizar estrategias publicitarias.</p>
+                    <ul>
+                        <li>Beneficios: Aumentan el alcance y la efectividad de las campañas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sixth section / neural operations -->
+    <section class="section-neural-operations" id="section-neural-operations">
+        <div class="container">
+            <div class="container-text">
+                <p class="epigrafe">SIMPLIFICA TUS PROCESOS INTERNOS CON HERRAMIENTAS PERSONALIZADAS</p>
+                <h2><span>Neural Operations:</span> Operaciones Más Inteligentes, Resultados Más Rápidos</h2>
+                <p class="parrafo">Neural Operations transforma la gestión empresarial con soluciones diseñadas para
+                    empresas grandes. Nuestros dashboards avanzados, onboarding automatizado y agentes inteligentes
+                    ayudan a mejorar la eficiencia operativa y optimizar recursos.</p>
+            </div>
+            <div class="container-options">
+                <div class="item item-1">
+                    <div class="container-img">
+                        <video autoplay loop>
+                            <source src="imagenes/VID-20250105-WA0005.mp4" type="video/mp4"> Tu navegador no soporta la etiqueta de
+                            video.
+                        </video>
+                    </div>
+                    <div class="container-text">
+                        <h1>
+                            <img src="imagenes/Feather Icon.svg" alt="">
+                            Dashboards personalizados
+                        </h1>
+                        <p>
+                            Centralizan y analizan datos en tiempo real para una toma de decisiones informada. <br><br>
+                            Beneficios: Identifican oportunidades, solucionan problemas y mejoran la eficiencia.
+                        </p>
+                    </div>
+                </div>
+                <div class="item item-2">
+                    <div class="container-img">
+                        <img src="imagenes/pexels-pixabay-373543.webp" alt="">
+                    </div>
+                    <div class="container-text">
+                        <h1>
+                            <img src="imagenes/Feather Icon.svg" alt="">
+                            Onboarding personalizados
+                        </h1>
+                        <p>
+                            Simplifica la incorporación de empleados con flujos guiados y automatizados. <br><br>
+                            Beneficios: Acelera la integración del talento y mejora la experiencia del empleado.
+                        </p>
+                    </div>
+                </div>
+                <div class="item item-3">
+                    <div class="container-img">
+                        <img src="imagenes/agentes-inteligentes-1200x630.original.webp" alt="">
+                    </div>
+                    <div class="container-text">
+                        <h1>
+                            <img src="imagenes/Feather Icon.svg" alt="">
+                            Agentes inteligentes de Operaciones
+                        </h1>
+                        <p>
+                            Automatizan tareas administrativas como la programación de citas y la gestión de preguntas
+                            frecuentes. <br><br>
+                            Beneficios: Liberan tiempo para actividades estratégicas y mejoran la productividad.
+                        </p>
+                    </div>
+                </div>
+                <div class="item item-4">
+                    <div class="container-img">
+                        <img src="imagenes/WhatsApp_Image_2025-01-05_at_13.43.34.webp" alt="">
+                    </div>
+                    <div class="container-text">
+                        <h1>
+                            <img src="imagenes/Feather Icon.svg" alt="">
+                            Logistica
+                        </h1>
+                        <p>
+                            Los dashboards integrados con IA pueden analizar los SKU en tiempo real, proporcionando recomendaciones y análisis basados en datos para optimizar la gestión logística. <br><br>
+                            Beneficios: Optimización de inventarios, Toma de decisiones rápidas, Reducción de costos, Reducción de costos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- sixth section / Neural Marketing -->
+    <section class="section-neural-marketing" id="section-neural-marketing">
+        <div class="container">
+            <div class="container-text">
+                <h2><span>Neural Marketing:</span> Revolucioná tu marketing con Inteligencia Artificial</h2>
+                <p class="parrafo">Neural Marketing combina creatividad, análisis de datos y tecnología para diseñar
+                    estrategias impactantes. Ayudamos a empresas grandes a destacar en mercados competitivos con
+                    soluciones escalables e innovadoras.</p>
+            </div>
+            <div class="elemento-1">
+                <img src="imagenes/Group.svg" alt="">
+            </div>
+        </div>
+        <div class="container-marketing-services">
+            <div class="item item-1">
+                <div class="container-img">
+                    <img src="imagenes/image (1).jpg" alt="">
+                </div>
+                <div class="container-text">
+                    <h3>Avatares Virtuales</h3>
+                    <p>Representan tu marca con una atención personalizada y profesional, disponibles 24/7.</p>
+                    <ul>
+                        <li>Beneficios: Ofrecen consistencia en la comunicación, mejoran la percepción de marca y
+                            reducen costos operativos.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item item-2">
+                <div class="container-img">
+                    <img src="imagenes/image (2).jpg" alt="">
+                </div>
+                <div class="container-text">
+                    <h3>Pautas con AI</h3>
+                    <p>Optimiza campañas publicitarias analizando métricas en tiempo real, ajustando automáticamente
+                        parámetros para maximizar el ROI.
+                    </p>
+                    <ul>
+                        <li>Beneficios: Incrementa la efectividad y asegura resultados medibles.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item item-3">
+                <div class="container-img">
+                    <img src="imagenes/image (3).jpg" alt="">
+                </div>
+                <div class="container-text">
+                    <h3>Influencers digitales</h3>
+                    <p>Avatares diseñados para actuar como embajadores virtuales de tu marca, generando contenido y
+                        conectando con tu audiencia.
+                    </p>
+                    <ul>
+                        <li>Beneficios: Maximizan la flexibilidad estratégica y eliminan riesgos de imagen.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item item-4">
+                <div class="container-img">
+                    <img src="imagenes/image (4).jpg" alt="">
+                </div>
+                <div class="container-text">
+                    <h3>Creación de herramientas de contenido visual</h3>
+                    <p>Herramientas basadas en IA para generar gráficos y videos personalizables.
+                    </p>
+                    <ul>
+                        <li>Beneficios: Aceleran la producción y garantizan alta calidad visual.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item item-5">
+                <div class="container-img">
+                    <img src="imagenes/image (5).jpg" alt="">
+                </div>
+                <div class="container-text">
+                    <h3>Automatización de embudos sociales</h3>
+                    <p>Transforman interacciones en redes sociales en prospectos calificados mediante respuestas
+                        automatizadas y seguimiento estratégico.
+                    </p>
+                    <ul>
+                        <li>Beneficios: Generan leads continuamente y aseguran un manejo eficiente de cada interacción.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <h1><span>Transforma</span> tu marketing con Neural Marketing. <span>Solicita una demo</span> personalizada
+                para descubrir cómo podemos potenciar tu impacto.</h1>
+            <button>
+                <img src="imagenes/Vector3.svg" alt="">
+                <p>Play demo</p>
+            </button>
+        </div>
+    </section>
+
+
+
+    <!-- seventh section / History -->
+    <section class="section-history">
+        <div class="container-text">
+            <p class="epigrafe">EMPRESAS LÍDERES YA ESTÁN TRANSFORMANDO SUS OPERACIONES CON NEURAL GENIUS..</p>
+            <h2><span>Historias que elevan empresas</span> Operaciones Más Inteligentes, Resultados Más Rápidos</h2>
+            <p class="parrafo">Neural Sales está diseñado para empresas grandes que buscan eficiencia en cada
+                interacción comercial. Nuestras soluciones aseguran que ningún prospecto quede sin atenderse y que
+                cada oportunidad de venta sea aprovechada al máximo.</p>
+        </div>
+    </section>
+
+
+    <!-- eighth section / user feedback -->
+    <section class="section-user-feedback">
+        <div class="container">
+            <div class="item item-1">
+                <div class="container-img">
+                    <img src="imagenes/logos-empresas/58b968c1-3df8-42cf-85ae-a53c7394e193.jfif" alt="">
+                </div>
+                <div class="container-text">
+                    <img src="imagenes/image 44.svg" alt="">
+                    <h4>me encantó conocer sobre estas herramientas tan prácticas, que nos facilitan y agilizan el
+                        trabajo, valoradisimo en los días de hoy, donde todo queremos para ayer. GRACIAS!</h4>
+                    <p><span>DNCP</p>
+                </div>
+            </div>
+            <div class="item item-2">
+                <div class="container-img">
+                    <img src="imagenes/logos-empresas/781ab2e9-e34e-4cd9-8ea5-0944bf535684.jfif" alt="">
+                </div>
+                <div class="container-text">
+                    <img src="imagenes/image 44.svg" alt="">
+                    <h4>Buen día. En mi caso uso para los guiones de las capsulas. Ayuda mucho con la sugerencia de
+                        imágenes, transiciones, etc. Uso más Openai, pero también me apoyo en perplexity cuando se trata
+                        de temas históricos o necesita contexto el material</h4>
+                    <p>Urban Domus</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1><span>Sé parte</span> de nuestra próxima historia de éxito</h1>
+            <button>Contactanos para empezar</button>
+        </div>
+    </section>
+
+
+
+    <!-- ninth section / digital-transform -->
+    <section class="section-digital-transform">
+        <div class="container-text">
+            <h1>¿Listo para transformar tu negocio con Inteligencia Artificial?</h1>
+            <p>Agenda una reunión y empieza tu transformación digital hoy mismo.</p>
+            <button>Empecemos</button>
+        </div>
+        <div class="container-img">
+            <img src="imagenes/animacion-antes-del--footer.gif" alt="">
+        </div>
+    </section>
+
+
+
+    <!-- Section partnership -->
+    <section class="section-partnership">
+        <div class="container-text">
+            <p class="epigrafe">Trabajamos en alianza para brindarte mejores soluciones y resultados.</p>
+            <h1>Partnership oficial con OCP Tech</h1>
+        </div>
+        <div class="container-img">
+            <img src="imagenes/Captura_de_pantalla_2025-01-05_161521-removebg-preview 1.svg" alt="">
+            <img class="img-cruz" src="imagenes/Frame 1000002714.svg" alt="">
+            <img src="imagenes/WhatsApp_Image_2024-12-26_at_08.40.30-removebg-preview 1.svg" alt="">
+        </div>
+    </section>
+
+
+    <!-- tenth section / footer -->
+    <footer class="footer" id="section-footer">
+        <a href="#section-home" class="container-logo">
+            <img src="imagenes/Logo_Neural_Genius.webp" alt="">
+        </a>
+        <ul class="ul ul-2">
+            <li>
+                <a href="https://www.instagram.com/neuralgenius.ai/">
+                    <img src="imagenes/Instagram.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="imagenes/Vector (1).svg" alt="">
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
